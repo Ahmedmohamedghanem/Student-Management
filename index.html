@@ -7,7 +7,7 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background: linear-gradient(to right, #ff7e5f, #feb47b); /* تغيير الخلفية لنمط متدرج */
+            background: linear-gradient(to right, #ff7e5f, #feb47b); 
             margin: 0;
             padding: 0;
             display: flex;
@@ -20,9 +20,9 @@
         h1 {
             color: #333;
             margin-bottom: 20px;
-            font-size: 2.5em; /* زيادة حجم الخط */
-            font-weight: bold; /* جعل الخط عريض */
-            text-align: center; /* محاذاة النص في الوسط */
+            font-size: 2.5em; 
+            font-weight: bold; 
+            text-align: center; 
         }
 
         form, table, input, button, select {
@@ -138,7 +138,7 @@
         <label for="paid-fees">Paid Fees:</label>
         <input type="number" id="paid-fees" name="paid-fees" min="0" required>
 
-        <label for="student-grade">Grade:</label> <!-- إضافة حقل صف الطالب -->
+        <label for="student-grade">Grade:</label> 
         <input type="text" id="student-grade" name="student-grade" required>
 
         <button type="submit">Add Student</button>
@@ -154,8 +154,8 @@
                 <th>Absence Day</th>
                 <th>Month</th>
                 <th>Paid Fees</th>
-                <th>Grade</th> <!-- إضافة عمود الصف -->
-                <th>Action</th> <!-- إضافة عمود للإجراءات -->
+                <th>Grade</th> 
+                <th>Action</th> 
             </tr>
         </thead>
         <tbody></tbody>
@@ -185,7 +185,7 @@
                         <td>${student.absenceDay}</td>
                         <td>${student.month}</td>
                         <td>${student.paidFees}</td>
-                        <td>${student.grade}</td> <!-- عرض صف الطالب -->
+                        <td>${student.grade}</td> 
                         <td><button class="remove-btn" data-index="${index}">Remove</button></td>
                     `;
                     studentTable.appendChild(row);
@@ -201,7 +201,7 @@
                     absenceDay: formData.get('absence-day'),
                     month: formData.get('month'),
                     paidFees: formData.get('paid-fees'),
-                    grade: formData.get('student-grade') // تخزين صف الطالب
+                    grade: formData.get('student-grade') 
                 };
 
                 const students = JSON.parse(localStorage.getItem('students')) || [];
